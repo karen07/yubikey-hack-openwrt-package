@@ -1,0 +1,22 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2010-2015 OpenWrt.org
+
+START=99
+
+USE_PROCD=1
+PROG=/usr/bin/yubikey-hack
+
+start_service() {	
+	procd_open_instance
+	procd_set_param command "$PROG"
+	procd_set_param respawn
+	procd_set_param stdout 1
+	
+	file=$(cat /etc/yubikey-hack/env)
+	for line in $file
+	do
+		procd_append_param env "$line"
+	done
+
+	procd_close_instance
+}
