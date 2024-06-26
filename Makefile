@@ -17,6 +17,7 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/yubikey-hack
 	SECTION:=net
 	CATEGORY:=Network
+	DEPENDS:=kmod-usb-hid kmod-usb-serial-ch341
 	TITLE:=Get data from YubiKey
 	URL:=https://github.com/karen07/yubikey-hack
 endef
