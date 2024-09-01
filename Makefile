@@ -8,7 +8,7 @@ PKG_LICENSE:=GPL-3.0-or-later
 ifeq ("$(wildcard ../yubikey-hack)", "")
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/karen07/yubikey-hack.git
-PKG_SOURCE_VERSION:=d3091a359e190a7cea2cf27d59b6afbce03da309
+PKG_SOURCE_VERSION:=03b1e584807850726ddd485bb975167cb97aa846
 endif
 
 include $(INCLUDE_DIR)/package.mk
