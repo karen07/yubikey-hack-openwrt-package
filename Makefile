@@ -29,7 +29,7 @@ endef
 ifneq ("$(wildcard ../yubikey-hack)", "")
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
-	$(CP) ../yubikey-hack/* $(PKG_BUILD_DIR)/
+	$(CP) ../yubikey-hack/. $(PKG_BUILD_DIR)/
 endef
 endif
 
