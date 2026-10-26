@@ -1,20 +1,18 @@
 # yubikey-hack OpenWrt package
 
-This repository contains the OpenWrt package definition for [yubikey-hack](https://github.com/karen07/yubikey-hack), a small remote YubiKey activation experiment.
-
-The package installs the `yubikey-hack` binary together with an OpenWrt init script. It declares the USB HID and CH341 serial kernel modules used by the original hardware setup.
-
-For development, the Makefile can build from a sibling `../yubikey-hack` checkout. Otherwise OpenWrt fetches the tagged upstream source specified by `PKG_VERSION`.
+OpenWrt packaging for [yubikey-hack](https://github.com/karen07/yubikey-hack), an
+experiment in remote YubiKey activation using a relay-controlled hardware setup.
 
 ## Описание
 
-Этот репозиторий содержит описание пакета OpenWrt для [yubikey-hack](https://github.com/karen07/yubikey-hack), небольшого эксперимента по удаленной активации YubiKey.
+Пакет OpenWrt для [yubikey-hack](https://github.com/karen07/yubikey-hack) - эксперимента по
+удалённой активации YubiKey с помощью реле.
 
 Пакет устанавливает бинарный файл `yubikey-hack` вместе со скриптом запуска OpenWrt. Он объявляет модули ядра USB HID и CH341 для последовательного порта, использовавшиеся в исходной аппаратной конфигурации.
 
 При разработке Makefile может собирать исходники из соседнего каталога `../yubikey-hack`. Если такого каталога нет, OpenWrt загружает версию исходников по тегу, заданному в `PKG_VERSION`.
 
-## Что находится в репозитории
+## Структура проекта
 
 - `yubikey-hack/Makefile` - описание OpenWrt package;
 - `yubikey-hack/files/etc/init.d/yubikey-hack` - init script;
